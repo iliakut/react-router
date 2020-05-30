@@ -8,7 +8,8 @@ const Third = ({history}) => {
       <div>
         <button onClick={() => history.push(`/third/${1}`)}>1</button>
         <button onClick={() => history.push(`/third/${2}`)}>2</button>
-        <button onClick={() => history.push(`/third/${3}`)}>3</button>
+        <button onClick={() => history.push('3')}>3</button>
+        {/* 3 - относительный путь, будет работать если роут заканчивается на "/" */}
       </div>
     </div>
   );

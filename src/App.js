@@ -17,12 +17,12 @@ function App() {
           <Link to="/">Main</Link>
           <Link to="/first">First</Link>
           <Link to="/second">Second</Link>
-          <Link to="/third">Third</Link>
+          <Link to="/third/">Third</Link> {/* "/" - в конце, чтобы работали относительные пути */}
           <Route path="/" exact render={() => <h1>React router test</h1>}/>
           <Route path="/first" component={First}/>
           <Route path="/first" render={() => <p>one more first</p>}/>
           <Route path="/second" component={Second}/>
-          <Route path="/third" component={Third}/>
+          <Route path="/third/" component={Third}/>
           <Route path="/third/:id" render={({match, location, history}) => {
             /*
             * match - содержит переданные параметры (id)
