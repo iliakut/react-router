@@ -14,4 +14,9 @@ const Third = ({history}) => {
   );
 };
 
+
+/*
+* withRouter - HOC для передачи компоненту объект react router
+*/
+
 export default withRouter(Third);
