@@ -6,6 +6,7 @@ import First from "./components/first";
 import Second from "./components/second";
 import Third from "./components/third";
 import ThirdItem from "./components/thirdItem";
+import Fourth from "./components/fourth";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Link to="/first">First</Link>
           <Link to="/second">Second</Link>
           <Link to="/third/">Third</Link> {/* "/" - в конце, чтобы работали относительные пути */}
+          <Link to="/fourth/">Fourth</Link>
           <Route path="/" exact render={() => <h1>React router test</h1>}/>
           <Route path="/first" component={First}/>
           <Route path="/first" render={() => <p>one more first</p>}/>
@@ -35,6 +37,7 @@ function App() {
             const { id }  = match.params;
             return <ThirdItem id={id}/>
           }}/>
+          <Route path="/fourth/:id?" component={Fourth}/> {/* ":id?" - опциональный путь, работает как с id так и без */}
           {/*
           Route
           path - путь соответствия (содержит путь) "/" - содержится во всех роутах, поэтому нужен exact
